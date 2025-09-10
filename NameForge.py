@@ -5,42 +5,22 @@ import argparse
 import sys
 
 def generate_usernames(firstname: str, lastname: str) -> set:
-    usernames = set()
-    
+    usernames = set()   
+    separators = ["", ".", "-", "_"]
 
-    usernames.add(firstname + lastname)
-    usernames.add(firstname + "." + lastname)
-    usernames.add(firstname + "-" + lastname)
-    usernames.add(firstname + "_" + lastname)
-    
-    usernames.add(lastname + firstname)
-    usernames.add(lastname + "." + firstname)
-    usernames.add(lastname + "-" + firstname)
-    usernames.add(lastname + "_" + firstname)
-    
-    usernames.add(firstname[0] + lastname) 
-    usernames.add(firstname[0] + "." + lastname)
-    usernames.add(firstname[0] + "-" + lastname)  
-    usernames.add(firstname[0] + "_" + lastname)
-    
-    usernames.add(lastname[0] + firstname) 
-    usernames.add(lastname[0] + "." + firstname)
-    usernames.add(lastname[0] + "-" + firstname)  
-    usernames.add(lastname[0] + "_" + firstname)
-    
-    usernames.add(firstname[0:3] + lastname[0:3])
-    usernames.add(firstname[0:3] + "." + lastname[0:3])
-    usernames.add(firstname[0:3] + "-" + lastname[0:3])
-    usernames.add(firstname[0:3] + "_" + lastname[0:3])
-    
-    usernames.add(lastname[0:3] + firstname[0:3])
-    usernames.add(lastname[0:3] + "." + firstname[0:3])
-    usernames.add(lastname[0:3] + "-" + firstname[0:3])
-    usernames.add(lastname[0:3] + "_" + firstname[0:3])
-    
-    usernames.add(firstname[0] + lastname[0])
-    usernames.add(lastname[0] + firstname[0])
-    
+    for sep in separators:
+        usernames.add(f"{firstname}{sep}{lastname}")
+        usernames.add(f"{lastname}{sep}{firstname}")
+
+        usernames.add(f"{firstname[0]}{sep}{lastname}")
+        usernames.add(f"{lastname[0]}{sep}{firstname}")
+
+        usernames.add(f"{firstname[:3]}{sep}{lastname[:3]}")
+        usernames.add(f"{lastname[:3]}{sep}{firstname[:3]}")
+
+    usernames.add(f"{firstname[0]}{lastname[0]}")
+    usernames.add(f"{lastname[0]}{firstname[0]}")
+
     return usernames
 
 
