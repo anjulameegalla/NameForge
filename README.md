@@ -2,6 +2,10 @@
 
 This Python script generates common **Active Directory (AD) style usernames** from a list of first and last names. It is useful for **pentesting, user enumeration, and wordlist generation** in enterprise environments.
 
+> [!NOTE]
+> Input names should be in the format: ***Firstname*** ***Lastname***. <br>
+Lines with missing names are skipped automatically. <br>
+
 ---
 
 ## Installation
