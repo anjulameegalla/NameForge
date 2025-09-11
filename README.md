@@ -74,12 +74,3 @@ smi_joh
 js
 sj
 ```
-
----
-
-### Note:
-
-- Active Directory usernames are not case-sensitive
-- Input names should be in the format: `Firstname Lastname`
-- Lines with missing names are skipped automatically
-- Results are de-duplicated and sorted alphabetically
