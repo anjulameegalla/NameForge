@@ -25,8 +25,8 @@ python3 NameForge.py -u <input_file> [-o <output_file>]
 
 ### Arguments
 
-- `u` → Path to the input file containing names (**required**)
-- `o` → Path to the output file (**optional**, defaults to **stdout**)
+- `-u` → Path to the input file containing names (**required**)
+- `-o` → Path to the output file (**optional**, defaults to **stdout**)
 
 ---
 
