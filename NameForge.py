@@ -25,6 +25,33 @@ def generate_usernames(firstname: str, lastname: str) -> set:
 
 
 def main():
+
+    print("""
+     __                       ___                                  
+  ╱╲ ╲ ╲__ _ _ __ ___   ___  ╱ __╲__  _ __ __ _  ___   _ __  _   _ 
+ ╱  ╲╱ ╱ _` │ '_ ` _ ╲ ╱ _ ╲╱ _╲╱ _ ╲│ '__╱ _` │╱ _ ╲ │ '_ ╲│ │ │ │
+╱ ╱╲  ╱ (_│ │ │ │ │ │ │  __╱ ╱ │ (_) │ │ │ (_│ │  __╱_│ │_) │ │_│ │
+╲_╲ ╲╱ ╲__,_│_│ │_│ │_│╲___╲╱   ╲___╱│_│  ╲__, │╲___(_) .__╱ ╲__, │
+                                          │___╱       │_│    │___╱ 
+
+Written by: Anjula M.
+GitHub: @anjulameegalla
+Discord: @an7ula
+
+- Input names should be in the format: Firstname Lastname. -
+- Lines with missing names are skipped automatically. -
+
+Usage:
+python3 NameForge.py -u <input_file> [-o <output_file>]
+
+Args:
+`-u` → Path to the input file containing names (required)
+`-o` → Path to the output file (optional, defaults to stdout)
+
+Bugs and suggestions: https://github.com/anjulameegalla/NameForge/issues
+
+""")
+
     parser = argparse.ArgumentParser(description="NameForge AD Usernames Generator")
     parser.add_argument("-u", help="UserList Path", required=True)
     parser.add_argument("-o", help="Output Filename (optional, default=stdout)", required=False)
@@ -34,7 +61,7 @@ def main():
         with open(args.u, "r") as infile:
             lines = infile.readlines()
     except FileNotFoundError:
-        print(f"[-] Error: File {args.u} not found.")
+        print(f"[-] Error: File {args.u} not found.\n")
         sys.exit(1)
 
     all_usernames = set()
@@ -55,7 +82,7 @@ def main():
         with open(args.o, "w") as outfile:
             for username in sorted(all_usernames):
                 outfile.write(username + "\n")
-        print(f"[+] Usernames generated successfully! Saved to {args.o}")
+        print(f"[+] Usernames generated successfully! Saved to {args.o}\n")
     else:
         for username in sorted(all_usernames):
             print(username)
