@@ -31,4 +31,6 @@ python3 NameForge.py -u <input_file> [-o <output_file>]
 
 ### Contributing
 
-Bugs and suggestions are welcome on [Issues](https://github.com/anjulameegalla/NameForge/issues)!
+Bugs and suggestions are welcome on [Issues](https://github.com/anjulameegalla/NameForge/issues)!  
+
+[![Contact](https://img.shields.io/badge/Contact-2ea44f?style=for-the-badge)](https://anjula.live/)
