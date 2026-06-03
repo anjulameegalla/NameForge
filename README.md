@@ -5,8 +5,6 @@ This Python script generates common **Active Directory (AD) style usernames** fr
 - Input names should be in the format: ***Firstname*** ***Lastname***. 
 - Lines with missing names are skipped automatically. <br> 
 
-<br>
-
 ## Installation
 
 Clone the repository:
@@ -28,4 +26,8 @@ python3 NameForge.py -u <input_file> [-o <output_file>]
 - `-o` → Path to the output file (**optional**, defaults to **stdout**)
 
 <br>
+
+See [**examples/**](examples/) for usage examples.
+
+
 
