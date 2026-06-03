@@ -34,9 +34,8 @@ def main():
 ╲_╲ ╲╱ ╲__,_│_│ │_│ │_│╲___╲╱   ╲___╱│_│  ╲__, │╲___(_) .__╱ ╲__, │
                                           │___╱       │_│    │___╱ 
 
-Written by: Anjula M.
-GitHub: @anjulameegalla
-Discord: @an7ula
+sxript by @anjulameegalla
+
 
 - Input names should be in the format: Firstname Lastname. -
 - Lines with missing names are skipped automatically. -
